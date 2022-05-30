@@ -1,34 +1,35 @@
 #define _CRT_SECURE_NO_WARNINGS 1
-//ĞèÒªÒıÈëµÄÎÄ¼ş
+//éœ€è¦å¼•å…¥çš„æ–‡ä»¶
 #include<stdio.h>
-//int main() {
-//	int a = 0;
-//	int b = 0;
-//	int c = 0;
-//	scanf("%d %d %d", &a, &b, &c);;//2 1 3
-//	//Ëã·¨ÊµÏÖ
-//	//a ×î´óÖµ
-//	//b ´ÎÖ®
-//	//c ×îĞ¡
-//	if (a < b) {
-//		int tmp = a;
-//		a = b;
-//		b = tmp;
-//	}
-//	if (a < c) {
-//		int tmp = a;
-//		a = c;
-//		c = tmp;
-//	}
-//	if (b < c) {
-//		int tmp = b;
-//		b = c;
-//		c = tmp;
-//	}
-//	printf("%d %d %d\n", a, b, c);
-//	return 0;
-//}
-//Èç½â´ğ´íÎó£¬×¢Òâ¼ì²é´íÎóĞÅÏ¢ÌáÊ¾£¬¶Ô±ÈÔ¤ÆÚÊä³öºÍÊµ¼ÊÊä³öÖ®¼äµÄ²îÒì
+int main() {
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	scanf("%d %d %d", &a, &b, &c);;//2 1 3
+	//ç®—æ³•å®ç°
+	//a æœ€å¤§å€¼
+	//b æ¬¡ä¹‹
+	//c æœ€å°
+	if (a < b) {
+		int tmp = a;
+		a = b;
+		b = tmp;
+	}
+	if (a < c) {
+		int tmp = a;
+		a = c;
+		c = tmp;
+	}
+	if (b < c) {
+		int tmp = b;
+		b = c;
+		c = tmp;
+	}
+	printf("%d %d %d\n", a, b, c);
+	return 0;
+}
+//å¦‚è§£ç­”é”™è¯¯ï¼Œæ³¨æ„æ£€æŸ¥é”™è¯¯ä¿¡æ¯æç¤ºï¼Œå¯¹æ¯”é¢„æœŸè¾“å‡ºå’Œå®é™…è¾“å‡ºä¹‹é—´çš„å·®å¼‚
+//ä¸‰ç›®è¿ç®—
 //int main07() {
 //	int a, b, c, max;
 //	scanf("%d,%d,%d", &a, &b, &c);
