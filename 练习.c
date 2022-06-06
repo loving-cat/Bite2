@@ -3,28 +3,85 @@
 #include<string.h>
 #include<Windows.h>
 #include<stdlib.h>
+//乘法口诀表
 int main() {
 	int i = 0;
-	char password[20] = { 0 };
-	for ( i = 0; i < 3; i++)
+	int j = 0;
+	//确定打印九行
+	for ( i = 1; i <=9; i++)
 	{
-		printf("请输入密码:>");
-		scanf("%s", &password);
-		if (strcmp(password,"123456") == 0) //==不能用来比较两个字符串是否相等，应该使用一个库函数-strcmp
-		{
-			printf("登录成功\n");
-			break;
+		//打印一行
+		int j = 1;
+		for (j = 1; j <= i; j++) {
+			printf("%d*%d=%2d ", i, j, i * j);
 		}
-		else {
-			printf("密码错误\n");
-			
-
-		}
+		printf("\n");
 	}
-	if (i == 3)
-		printf("三次密码均错误，退出程序\n");
 	return 0;
 }
+//int main() {
+//	int arr[] = {1,2,3,4,5,6,7,8,9,10};
+//	int max = arr[0];//最大值
+//	int i = 0;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	for ( i = 0; i < sz; i++)
+//	{
+//		if (arr[i] > max) {
+//			max = arr[i];
+//		}
+//	}
+//	printf("max = %d\n", max);
+//	return 0;
+//}
+//int main() {
+//	int i = 0;
+//	double sum = 0.0;
+//	int flag = 1;
+//	for ( i = 0; i <=100; i++)
+//	{
+//		sum += flag * 1.0 / i;
+//		flag = -flag;
+//	}
+//	print("%lf\n", sum);
+//	return 0;
+//}
+//int main() {
+//	int i = 0;
+//	int count = 0;
+//	for ( i = 1; i <=100; i++)
+//	{
+//		if (i % 10 == 9) {
+//			count++;
+//		}
+//		if(i/10 == 9) {
+//			count++;
+//		}
+//	}
+//	printf("count = %d\n", count);
+//	return 0;
+//}
+//int main() {
+//	int i = 0;
+//	char password[20] = { 0 };
+//	for ( i = 0; i < 3; i++)
+//	{
+//		printf("请输入密码:>");
+//		scanf("%s", &password);
+//		if (strcmp(password,"123456") == 0) //==不能用来比较两个字符串是否相等，应该使用一个库函数-strcmp
+//		{
+//			printf("登录成功\n");
+//			break;
+//		}
+//		else {
+//			printf("密码错误\n");
+//		
+//
+//		}
+//	}
+//	if (i == 3)
+//		printf("三次密码均错误，退出程序\n");
+//	return 0;
+//}
 //int main() {
 //	//welcome to bit!!!!!!
 //	//####################
@@ -143,4 +200,16 @@ int main() {
 //	}
 //	printf("ret = %d\n", ret);
 //	return 0;
+//}
+
+
+//int main() {
+//	int i = 0;
+//	for ( i = 1; i < 100; i++)
+//	{
+//		if (i % 3 == 0) {
+//			printf("3的倍数:%d\n", i);
+//		}
+//	}
+//	return 0; 
 //}
