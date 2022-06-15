@@ -73,24 +73,111 @@
 //1+1+1+my_strlen("");
 //1+1+1+0
 //3
-int my_strlen(char* str)
-{
-	if (*str != '\0')
-	{
-		return 1 + my_strlen(str + 1);
-	}
-	else
-	{
-		return 0;
-	}
-}
-int main()
-{
-	char arr[] ="bit";
-	//int len = strlen(str);
-	//printf("%d", len);
-	//模拟实现了一个strlen函数
-	int len = my_strlen(arr);//arr 是数组，数组传参，传过去的不是整个数组，而是首元素的地址
-	printf("len = %d\n", len);
-	return 0;
-}
+//int my_strlen(char* str)
+//{
+//	if (*str != '\0')
+//	{
+//		return 1 + my_strlen(str + 1);
+//	}
+//	else
+//	{
+//		return 0;
+//	}
+//}
+//int main()
+//{
+//	char arr[] ="bit";
+//	//int len = strlen(str);
+//	//printf("%d", len);
+//	//模拟实现了一个strlen函数
+//	int len = my_strlen(arr);//arr 是数组，数组传参，传过去的不是整个数组，而是首元素的地址
+//	printf("len = %d\n", len);
+//	return 0;
+//}
+
+//递归迭代
+//int Fac1(int n)
+//{
+//	int i = 0;
+//	int ret = 1;
+//	for ( i = 0; i <= n; i++)
+//	{
+//		ret *= i;
+//	}
+//	return ret;
+//}
+//int Fac2(int n)
+//{
+//	if (n <= 1)
+//	{
+//		return 1;
+//	}
+//	else {
+//		return n * Fac2(n - 1);
+//	}
+//}
+//int main()
+//{
+//	//求n的阶乘
+//	int n = 0;
+//	int ret = 0;
+//	scanf("%d", &n);
+//	ret = Fac2(n);
+//	printf("%d\n", ret);
+//	return 0;
+//}
+
+//斐波那契数列
+//1 1 2 3 5 8 13 21 34 55 .。。。
+//
+
+//描述第n个斐波那契数的时候
+//思路：先写函数怎么用//TDD - 测试驱动开发
+//int Fib(int n)
+//{
+//	if (n <= 2) 
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return Fib(n - 1) + Fib(n - 2);
+//	}
+//}
+// //效率低↑↑↑↑↑ 递归不适用所有场景
+//int Fib(int n)
+//{
+//	int a = 1;
+//	int b = 1;
+//	int c = 1;
+//	while (n > 2)
+//	{
+//		c = a + b;
+//		a = b;
+//		b = c;
+//		n--;
+//	}
+//	return c;
+//}
+//int main()
+//{
+//	int n = 0;
+//	int ret = 0;
+//	scanf("%d", &n);
+//	ret = Fib(n);
+//	printf("ret = %d\n",ret);
+//	return 0;
+//}
+//void test(int n)
+//{
+//	if (n < 10000)
+//	{
+//		test(n+1);
+//	}
+//}
+//int main()
+//{
+//	test(1);
+//	return 0;
+//}
+//↑↑栈溢出↑↑
