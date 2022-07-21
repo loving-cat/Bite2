@@ -53,15 +53,114 @@
 //    printf("%d",n);
 //    return 0;
 //}
+//
+//int main()
+//{
+//    int i = 0;
+//    while (scanf("%c", &i) != EOF)
+//    {
+//        if (i >= 'A' && i <= 'Z')
+//            printf("%c\n", (i + 32));
+//    }
+//    getchar();
+//    return 0;
 
-int main()
-{
-    int i = 0;
-    while (scanf("%c", &i) != EOF)
-    {
-        if (i >= 'A' && i <= 'Z')
-            printf("%c\n", (i + 32));
-    }
-    getchar();
-    return 0;
-}
+//宿舍开门单片机STM32代码
+//while (1)
+//{
+//	delay_ms(10);
+//	while (!(USART_RX_STA & 0x8000))
+//	{
+//		continue;
+//	}
+//	USART_RX_STA = 0;
+//	if ((USART_RX_BUF[0] != '4')
+//		|| (USART_RX_BUF[1] != '5')
+//		|| (USART_RX_BUF[2] != '1'))
+//	{
+//		continue;
+//	}
+//	LED = !LED;
+//	DOOR = 1;
+//	USART_RX_STA = 0;
+//	delay_ms(1000);
+//	delay_ms(1000);
+//	DOOR = 0;
+//}
+
+//算100-200的素数
+//int main()
+//{
+//	int i,j = 0;
+//	for ( i = 100; i < 200; i++)
+//	{
+//		for ( j = 2; j < i; j++)
+//		{
+//			if (i % j == 0)
+//			{
+//				break;
+//			}
+//		}
+//		if (j == i)
+//		{
+//			printf("素数是=%d\n", i);
+//		}
+//
+//	}
+//	return 0;
+//}
+
+//求10个数最大值
+//int main()
+//{
+//	int max = 0;
+//	int arr[10] = { 0 };
+//	int i = 0;
+//	for ( i = 0; i < 10; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//	max = arr[0];
+//	for ( i = 0; i < 10; i++)
+//	{	
+//		if(max<arr[i])
+//		{
+//			max = arr[i];
+//			i++;
+//		}
+//	}
+//	printf("%d", max);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10};
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int left = 0;
+//	int right = sz - 1;
+//	int n = 0;
+//	scanf("%d", &n);
+//	while (left<=right)
+//	{
+//		int mid = (left + right) / 2;
+//		
+//		if (arr[mid] > n)
+//		{
+//			right = arr[mid] - 1;
+//		}
+//		else if (arr[mid] < n)
+//		{
+//			left = arr[mid] + 1;
+//		}
+//		else{
+//			printf("找到了，它的下标=%d\n", mid);
+//			break;
+//		}
+//	}
+//	if (left>right)
+//	{
+//		printf("不在数组里");
+//	}
+//	return 0;
+//}
